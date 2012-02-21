@@ -1,6 +1,29 @@
+# server options
 auto: true
 pygments: true
+#server_port: 4000
 markdown: rdiscount
 rdiscount:
  extensions: [smart]
+
+# blog metadata
 author: Hui Zheng
+title: GitHub pages
+subtitle: 
+permalink: /:year/:month/:day/:title
+
+# web services
+gravatar: 65771458eb066098b716e6ee31df1738
+disqus: hzheng
+twitter: xyz98
+ga: UA-29218291-1
+feedburner: huizheng
+
+# URLs
+url: http://en.zhenghui.org
+github_home: https://github.com/hzheng
+
+# directories
+js_dir: /assets/js
+css_dir: /assets/css
+img_dir: /assets/image

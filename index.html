@@ -1,18 +1,36 @@
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <title>Hui Zheng's github pages</title>
-    </head>
-    <body>
-        <h2>Hui Zheng's github projects</h2>
-        <li>
-            <a href="1pass4all">1pass4all</a>
-            a bookmarklet to create passwords easily and securely
-        </li>
-        <li>
-            <a href="https://github.com/hzheng/vimconf">vimconf</a>
-            vim configuration
-        </li>
-    </body>
-</html>
+---
+layout: default
+title: Home
+---
 
+<h2>Posts</h2>
+<ul class="list">
+    {% for post in site.posts %}
+    <li>
+        <a href="{{post.url}}">{{post.title}}</a>
+        (
+        <a class="comment-count" href="{{post.url}}/#disqus_thread">
+            <span class="disqus-count-text">gathering comments...</span>
+        </a>
+        )
+        <span>{{post.date | date: "%B %e, %Y"}}</span>
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Projects</h2>
+<ul class="list">
+    <li>
+        <a href="{{site.github_home}}/1pass4all">1pass4all</a>
+        - a bookmarklet to create passwords easily and securely
+    </li>
+    <li>
+        <a href="{{site.github_home}}/vimconf">vimconf</a>
+        - vim configuration
+    </li>
+</ul>
+
+<script type="text/javascript">
+    var disqus_shortname = '{{site.disqus}}';
+    site.loadJs('http://' + disqus_shortname + '.disqus.com/count.js');
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="{{site.author}}" />
+
+        <title>{{page.title}} | {{site.title}} | {{site.author}}</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{site.css_dir}}/styles.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="{{site.css_dir}}/syntax.css" type="text/css" />
+        <style type="text/css">
+            {{page.style}}
+        </style>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="{{site.js_dir}}/site.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                    {{page.script}}
+                });
+        </script>
+    </head>
+
+    <body>
+        <div id="header"><a href="/">en.zhenghui.org</div>
+        <div id="content">{{content}}</div>
+
+        <!--google analytics-->
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', '{{site.ga}}']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,233 @@
+/* General selectors */
+
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+	font-family: "Droid Serif", Georgia, Times, serif;
+    font-weight: 400;
+}
+
+h1 {
+    color: #222;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin-top: 18px;
+    margin-bottom: .15em;
+    border-bottom: 2px solid #ccc;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+h3 {
+    color: #777;
+    font-size: 21px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #777;
+    font-size: 19px;
+}
+
+a {
+    text-decoration: none;
+    color: #1B8BE0;
+}
+
+h1 a, h2 a, h3 a, h4 a {
+    color: #111;
+    text-decoration: none;
+}
+
+p {
+	font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 2em 1em;
+}
+
+p code, li code {
+    background-color: #F9F9F9;
+    border: 1px solid #eee;
+    font-size: 12px;
+    padding: 2px 3px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+/* Special selectors */
+
+#header {
+    width: 100%;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    color: #FFF;
+    background: #5E88E4;
+    padding: 4px 2px;
+    text-align: center;
+}
+
+#header a {
+    color: #FFF;
+}
+
+#content {
+    width: 80%;
+    margin: 15px auto 40px auto;
+}
+
+ul.list {
+    margin-top: 10px;
+}
+
+ul.list li {
+    font-size: 14px;
+    list-style: none;
+    padding: 5px 0px;
+    margin: 0;
+    color: #777;
+    border-bottom: 1px solid #eee;
+}
+
+ul.list li span {
+    float: right;
+}
+
+ul.list li span.disqus-count-text {
+    float: none;
+    color: silver;
+}
+
+ul.list li a.comment-count {
+    color: green;
+}
+
+#post {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#post p {
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    line-height: 1.7em;
+}
+
+#post .author {
+    margin-bottom: 17px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    padding-left: 0px;
+    font-size: 13px;
+    color: #777;
+}
+
+#post .author span {
+    padding-right: 4px;
+}
+
+#post .author img {
+    display: inline;
+    margin: 0 0 -1px 0;
+    border: 0px;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#post .date {
+}
+
+#post .category, #post tag {
+    padding-left: 2px;
+}
+
+#post blockquote {
+    font-style: italic;
+    font-size: 14px;
+    padding: .25em 1em;
+    margin: 1em 1em 0 1em;
+    color: #444;
+}
+
+#post blockquote cite:before {
+    content: "— ";
+}
+
+#feedback {
+    margin: 20px 0;
+    padding: 10px 5px;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#feedback img, #about-me img {
+    position: relative;
+    float: left;
+    margin: 5px 10px 1px 1px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px #555;
+}
+
+#feedback .like {
+    padding: 8px 4px 2px 12px;
+    border-top: 1px solid #ccc;
+}
+
+#disqus_thread {
+    background: #BFCFC5;
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+}
+
+#disqus_thread .dsq-trackback-url input{
+    width: 70%;
+    color: #1B8BE0;
+    border: 0px solid;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    background: transparent;
+    margin-bottom: 0px;
+}
+
+#about-me {
+    padding: 4px 2px 2px 8px;
+}
+
+.twitter-share-button {
+}
+
+.twitter-follow-button {
+    width: 200px !important;
+    position: relative;
+    top: 35px;
+}
