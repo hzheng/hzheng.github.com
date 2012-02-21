@@ -22,6 +22,7 @@ feedburner: huizheng
 # URLs
 url: http://en.zhenghui.org
 github_home: https://github.com/hzheng
+disqus_home: http://hzheng.disqus.com
 
 # directories
 js_dir: /assets/js

@@ -92,11 +92,11 @@ p code, li code {
     margin: 15px auto 40px auto;
 }
 
-ul.list {
+.section {
     margin-top: 10px;
 }
 
-ul.list li {
+ul.section li {
     font-size: 14px;
     list-style: none;
     padding: 5px 0px;
@@ -105,16 +105,16 @@ ul.list li {
     border-bottom: 1px solid #eee;
 }
 
-ul.list li span {
+ul.section li span {
     float: right;
 }
 
-ul.list li span.disqus-count-text {
+ul.section li span.disqus-count-text {
     float: none;
     color: silver;
 }
 
-ul.list li a.comment-count {
+ul.section li a.comment-count {
     color: green;
 }
 
