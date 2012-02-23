@@ -31,10 +31,13 @@ title: Home
 </ul>
 
 <h2>Comments</h2>
+
 <div class="section">
-    <script type="text/javascript" src="{{site.disqus_home}}/combination_widget.js?num_items=5&hide_mods=0&color=blue&default_tab=people&excerpt_length=200"></script>
+    <script type="text/javascript" src="http://{{site.disqus}}.disqus.com/combination_widget.js?num_items=5&hide_mods=0&color=blue&default_tab=people&excerpt_length=200"></script>
 </div>
 
 <script type="text/javascript">
-    site.loadJs('{{site.disqus_home}}/count.js');
+    var disqus_shortname = '{{site.disqus}}';
+    site.loadJs('http://' + disqus_shortname + '.disqus.com/count.js');
 </script>
+
