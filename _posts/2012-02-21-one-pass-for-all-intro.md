@@ -2,11 +2,15 @@
 layout: post
 category: project
 tags:
+    - 1pass4all
     - project
+    - JavaScript
+    - software
     - bookmarklet
     - password
     - security
 title: One Pass For All - An introduction to 1pass4all
+description: An introduction to 1pass4all, an expedient password management tool
 ---
 
 One Pass For All
@@ -135,8 +139,8 @@ Hopefully, 1pass4all provides some improvements over SuperGenPass as follows:
 Like SuperGenPass, 1pass4all also has mobile version in case you cannot 
 or don't want to install bookmarklet for some reason. For example, when you are
 on a mobile or on other's computer, or you are visiting an untrusted website
-that may steal your master password, or you are logging on a non-browser
-application.
+that may steal your master password. It's useful as well when you are logging
+on a non-browser application.
 
 I will be gratified if your interest has been aroused so far. Please don't
 hesitate to [give it a try]({{site.url}}/1pass4all/archive/install.html) now.

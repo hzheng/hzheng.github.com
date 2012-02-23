@@ -4,6 +4,8 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="author" content="{{site.author}}" />
+        <meta name="description" content="{{page.description}}" />
+        <meta name="keywords" content="{% for tag in page.tags %}{{tag}},{% endfor %}" />
 
         <title>{{page.title}} | {{site.title}} | {{site.author}}</title>
 
