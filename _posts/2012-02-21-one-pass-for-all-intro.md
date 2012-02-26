@@ -33,6 +33,10 @@ password database whenever in need.
 Having used password management tools(e.g. [KeePass](http://keepass.info/), 
 [1Password](https://agilebits.com/onepassword), [LastPass](https://lastpass.com/))
 for a fairly long time, I still feel they are not perfectly desirable.
+1Password looks nicer than KeePass, but it's expensive and is not available in
+Linux. The advantage of LastPass is it supports cloud sync, but storing
+confidential data in the internet is not worry-free, and 
+[LastPass is not exception] [LastPass-hacked].
 Although all of them can generate random passwords, they are inherently
 unfriendly to my memory. Surely, I don't have to remember them, and that is
 exactly the whole point of these managers, isn't it? But it's kind of a pain
@@ -44,13 +48,15 @@ Being a programmer, I've even written some scripts to help reproduce them.
 The catch of this approach is I'll be out of luck when away from my own
 computer. Finally, it occurs to me that JavaScript is a better choice than
 shell scripts in such situation, for the former is more related to browsers
-and its runtime environment is more available. Therefore, I begin to
-focus on [bookmarklet] [bookmarklet] way.
+and its runtime environment is more available. Besides, the process and
+result of JavaScript execution is neither transmitted in network nor saved
+in local disk, which guarantees the safety of passwords.
+Therefore, I begin to focus on [bookmarklet] [bookmarklet] way.
 Technically, a bookmarklet is a piece of JavaScript saved as the URL of a 
 bookmark in a browser or as a hyperlink on a web page. Unlike a normal
 bookmark, once clicked a bookmarklet won't take you to another web page.
 Instead, the stored JavaScript code will be executed in the current web page.
-It's unobtrusive, cross-browser, handy, and easy-to-install.
+It's [unobtrusive] [unobtrusive_JavaScript], cross-browser, handy, and easy-to-install.
 
 To avoid reinventing the wheel, I look up the web to see if anyone else has
 the same idea. It turns out [SuperGenPass] [sgp]
@@ -79,15 +85,13 @@ or record some other sensitive information.
 
 Before adopting SuperGenPass, I take a closer look at its features and source
 code. In my opinion, there are some defects that cannot be ignored.
-For one thing, MD5 is
-[considered cryptographically broken](http://www.kb.cert.org/vuls/id/836068).
+For one thing, MD5 is [considered cryptographically broken] [md5-broken].
 It's OK to serve as file integrity checker, but not that competent as a password
 generator. What is worse, SuperGenPass's default 
 [salt] [salt] is empty and cannot
 be customized unless you modify the source code. This makes it more vulnerable
-to [dictionary attack](http://en.wikipedia.org/wiki/Dictionary_attack).
-Another problem is SuperGenPass is solely based on
-[Base64](http://en.wikipedia.org/wiki/Base64), which means the generated
+to [dictionary attack] [Dictionary_attack]. Another problem is SuperGenPass is
+solely based on [Base64] [base64], which means the generated
 password are mainly composed of letters and digits, excluding many special
 characters like `?`, `!`, `$`, etc. This may dilute the strength of the 
 passwords, especially considering the default password length is only 10.
@@ -96,7 +100,7 @@ I have multiple accounts on the same websites(e.g. gmail, dropbox), and
 definitely don't wish all of them share passwords. Appending or prepending
 a master password with a username may be barely enough, but nominally 
 this make ONE master password not really true, and theoretically,
-simple concatenation of a key and data is less appropriate than
+simple concatenation of a key and data is less reliable than
 [HMAC] [HMAC] algorithm. In addition, it seems that SuperGenPass doesn't work
 well on password-change page(let me know if I am wrong here). I have no clue
 why sometimes it autofills all passwords including old password, new password
@@ -114,7 +118,7 @@ Hopefully, 1pass4all provides some improvements over SuperGenPass as follows:
   By default, the generated password may contain any printable characters(Base94)
   instead of Base64 characters, and password's maximal length extends from 24
   to 26. Besides, it supports customizable salt and hash iteration(for
-  [key stretching](https://secure.wikimedia.org/wikipedia/en/wiki/Key_stretching)).
+  [key stretching] [Key_stretching]).
   Furthermore, 1pass4all can take username into account, which means the same
   master password on the same website will result in different passwords
   as long as logins differ.
@@ -123,7 +127,7 @@ Hopefully, 1pass4all provides some improvements over SuperGenPass as follows:
  
   When possible, 1pass4all will auto-login after populating password
   without popping up a confirmation form. If everything goes smoothly,
-  the bookmarklet just acts as a login button.
+  the bookmarklet just acts as a login button, except doing something magic underneath.
   Normally, clicking the bookmarklet will only change the value of the focused
   password field(or the first one if none is focused). This is less confusing, 
   and can avoid unwanted password transformation(e.g. those manually typed
@@ -132,9 +136,9 @@ Hopefully, 1pass4all provides some improvements over SuperGenPass as follows:
 * functionality:
 
   Aiming at advanced users, 1pass4all supports a specialized password syntax,
-  so that they can specify username auto-detection, password-length, salt,
-  hash iteration, password character set etc. in the password field(instead of
-  a pop-up form) on-the-fly.
+  so that they can specify username, domain, password-length, salt, hash
+  iteration, password character set, username auto-detection, auto-login etc.
+  in the password field(instead of a pop-up form) on-the-fly.
 
 Like SuperGenPass, 1pass4all also has mobile version in case you cannot 
 or don't want to install bookmarklet for some reason. For example, when you are
@@ -142,14 +146,24 @@ on a mobile or on other's computer, or you are visiting an untrusted website
 that may steal your master password. It's useful as well when you are logging
 on a non-browser application.
 
+Advanced users(esp. programmers) are recommended to choose DIY version, where
+they could more readily define parameters, relocate JavaScript code's hosting
+address, and modify the algorithm when necessary.
+
 I will be gratified if your interest has been aroused so far. Please don't
 hesitate to [give it a try]({{site.url}}/1pass4all/archive/install.html) now.
-For further instructions, you may read
-[README file]({{site.github_home}}/1pass4all/blob/master/README.rst).
+For further instructions, you may read [README file] [README-file].
 Any problems and suggestions are welcome in the comments below.
+As a reminder, despite the fact that 1pass4all can largely strengthen your
+password, you still need design a very strong master password, since 1pass4all's
+algorithm is open. Fortunately, that's the only password you have to memorize
+at any time.
 
 Lastly,  I'd like to acknowledge SuperGenPass for inspiring me to develop
 this project.
+
+P.S. The [Chinese version]({{site.url}}/2012/02/26/one-pass-for-all-intro_CN/)
+of this article is also available. 
 
 Reference
 ---------
@@ -158,20 +172,16 @@ Reference
 
 [2] [Wikipedia: bookmarklet] [bookmarklet]
 
-[3] [Wikipedia: MD5] [MD5]
+[3] [Wikipedia: Unobtrusive JavaScript] [Unobtrusive_JavaScript]
 
-[4] [Wikipedia: Cryptographic_hash_function] [hash_function]
+[4] [Wikipedia: MD5] [MD5]
 
-[5] [Wikipedia: Salt_(cryptography)] [salt]
+[5] [Wikipedia: Cryptographic_hash_function] [hash_function]
 
-[6] [Wikipedia: SHA-2] [SHA-2]
+[6] [Wikipedia: Salt_(cryptography)] [salt]
 
-[7] [Wikipedia: HMAC] [HMAC]
+[7] [Wikipedia: SHA-2] [SHA-2]
 
-[bookmarklet]: http://en.wikipedia.org/wiki/Bookmarklet
-[sgp]: http://supergenpass.com
-[MD5]: http://en.wikipedia.org/wiki/MD5
-[hash_function]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
-[salt]: http://en.wikipedia.org/wiki/Salt_(cryptography)
-[SHA-2]: http://en.wikipedia.org/wiki/SHA-2
-[HMAC]: http://en.wikipedia.org/wiki/HMAC
+[8] [Wikipedia: HMAC] [HMAC]
+
+{% include 1pass4all-intro-links.md %}

@@ -1,0 +1,15 @@
+[bookmarklet]: http://en.wikipedia.org/wiki/Bookmarklet
+[sgp]: http://supergenpass.com
+[MD5]: http://en.wikipedia.org/wiki/MD5
+[hash_function]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
+[salt]: http://en.wikipedia.org/wiki/Salt_(cryptography)
+[SHA-1]: http://en.wikipedia.org/wiki/SHA-1
+[SHA-2]: http://en.wikipedia.org/wiki/SHA-2
+[HMAC]: http://en.wikipedia.org/wiki/HMAC
+[unobtrusive_JavaScript]: http://en.wikipedia.org/wiki/Unobtrusive_JavaScript
+[LastPass-hacked]: http://techcrunch.com/2011/05/05/password-manager-last-pass-possibly-hacked
+[md5-broken]: http://www.kb.cert.org/vuls/id/836068
+[dictionary_attack]: http://en.wikipedia.org/wiki/Dictionary_attack
+[base64]: http://en.wikipedia.org/wiki/Base64
+[key_stretching]: http://en.wikipedia.org/wiki/Key_stretching
+[README-file]: {{site.github_home}}/1pass4all/blob/master/README.rst
