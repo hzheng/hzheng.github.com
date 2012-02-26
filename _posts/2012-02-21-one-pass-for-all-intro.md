@@ -148,7 +148,8 @@ on a non-browser application.
 
 Advanced users(esp. programmers) are recommended to choose DIY version, where
 they could more readily define parameters, relocate JavaScript code's hosting
-address, and modify the algorithm when necessary.
+address, change the style of interface(to improve the crude UI), 
+and modify the algorithm when necessary.
 
 I will be gratified if your interest has been aroused so far. Please don't
 hesitate to [give it a try]({{site.url}}/1pass4all/archive/install.html) now.
