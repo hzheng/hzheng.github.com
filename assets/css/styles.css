@@ -87,6 +87,13 @@ p code, li code {
     color: #FFF;
 }
 
+#header .link {
+    float: right;
+    font-size: 85%;
+    color: orange;
+    padding-right: 10px;
+}
+
 #content {
     width: 80%;
     margin: 15px auto 40px auto;
