@@ -6,6 +6,7 @@
         <meta name="author" content="{{site.author}}" />
         <meta name="description" content="{{page.description}}" />
         <meta name="keywords" content="{% for tag in page.tags %}{{tag}},{% endfor %}" />
+        <link rel="alternate" type="application/rss+xml" title="{{site.title}} &raquo; Atom Feed" href="{{site.atom}}" />
 
         <title>{{page.title}} | {{site.title}} | {{site.author}}</title>
 
@@ -30,7 +31,8 @@
     <body>
         <div id="header">
             <a href="/">en.zhenghui.org</a>
-            <a class="link" href="/feed/">subscribe</a>
+            <a class="link" href="{{site.atom}}">subscribe</a>
+            <a class="link" href="/sitemap.xml">sitemap</a>
         </div>
         <div id="content">{{content}}</div>
 

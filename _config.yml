@@ -8,7 +8,7 @@ rdiscount:
 
 # blog metadata
 author: Hui Zheng
-title: GitHub pages
+title: Thinking in Thinking
 subtitle: 
 permalink: /:year/:month/:day/:title
 
@@ -21,6 +21,8 @@ feedburner: huizheng
 
 # URLs
 url: http://en.zhenghui.org
+feed: http://en.zhenghui.org/feed
+atom: http://en.zhenghui.org/feed/atom.xml
 github_home: https://github.com/hzheng
 
 # directories
