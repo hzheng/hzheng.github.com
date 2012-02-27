@@ -9,7 +9,7 @@ rdiscount:
 # blog metadata
 author: Hui Zheng
 title: Thinking in Thinking
-subtitle: 
+subtitle: Hui Zheng's blog
 permalink: /:year/:month/:day/:title
 
 # web services
@@ -17,12 +17,12 @@ gravatar: 65771458eb066098b716e6ee31df1738
 disqus: hzheng
 twitter: xyz98
 ga: UA-29218291-1
-feedburner: huizheng
 
 # URLs
 url: http://en.zhenghui.org
 feed: http://en.zhenghui.org/feed
 atom: http://en.zhenghui.org/feed/atom.xml
+feedburner: http://feeds.feedburner.com/xyz98
 github_home: https://github.com/hzheng
 
 # directories

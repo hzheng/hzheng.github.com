@@ -7,8 +7,9 @@
         <meta name="description" content="{{page.description}}" />
         <meta name="keywords" content="{% for tag in page.tags %}{{tag}},{% endfor %}" />
         <link rel="alternate" type="application/rss+xml" title="{{site.title}} &raquo; Atom Feed" href="{{site.atom}}" />
+        <link rel="alternate" type="application/rss+xml" title="{{site.title}} &raquo; FeedBurner" href="{{site.feedburner}}" />
 
-        <title>{{page.title}} | {{site.title}} | {{site.author}}</title>
+        <title>{{page.title}} | {{site.title}} | {{site.subtitle}}</title>
 
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -31,7 +32,8 @@
     <body>
         <div id="header">
             <a href="/">en.zhenghui.org</a>
-            <a class="link" href="{{site.atom}}">subscribe</a>
+            <a class="link" href="{{site.atom}}">atom</a>
+            <a class="link" href="{{site.feedburner}}">feedburner</a>
             <a class="link" href="/sitemap.xml">sitemap</a>
         </div>
         <div id="content">{{content}}</div>
