@@ -10,6 +10,7 @@ tags:
     - password
     - security
 title: 一条密码走天下 - 1pass4all简介
+excerpt_words: 10
 description: 1pass4all——一个便利的密码管理工具
 ---
 

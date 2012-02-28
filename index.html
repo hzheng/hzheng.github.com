@@ -18,6 +18,15 @@ description: Hui Zheng's blog
         </a>
         )
         <span>{{post.date | date: "%B %e, %Y"}}</span>
+        <div class="digest">
+            {% if post.excerpt_words %}
+                {% assign word_count = post.excerpt_words %}
+            {% else %}
+                {% assign word_count = 100 %}
+            {% endif %}
+            {{post.content | truncatewords:word_count | replace:'<h2>',"<a style='display:none'>" | replace:'</h2>','</a>'}}
+            <a href='{{post.url}}'>Read more</a>
+        </div>
     </li>
     {% endfor %}
 </ul>

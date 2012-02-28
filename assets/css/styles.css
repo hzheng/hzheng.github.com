@@ -89,7 +89,7 @@ p code, li code {
 
 #header .link {
     float: right;
-    font-size: 85%;
+    font-size: 80%;
     color: orange;
     padding-right: 10px;
 }
@@ -114,6 +114,11 @@ ul.section li {
 
 ul.section li span {
     float: right;
+}
+
+.section .digest {
+    background: #D0D0D0;
+    padding: 0px 5px;
 }
 
 ul.section li span.disqus-count-text {
