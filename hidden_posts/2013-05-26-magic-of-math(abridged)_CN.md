@@ -6,7 +6,7 @@ tags:
     - computer-science
     - programmer
     - learning
-title: 数学魔术 - 评《具体数学》（缩略版）
+title: 数学魔术——评《具体数学》（缩略版）
 excerpt_words: 5
 description: 《具体数学》书评（缩略版）
 ---
